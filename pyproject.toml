@@ -1,0 +1,10 @@
+[project]
+name = "sde-intern-ai-resume-screening-assignment"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+    "httpx>=0.28.1",
+    "openai>=3.14.0",
+    "pymupdf>=1.28.2",
+]
