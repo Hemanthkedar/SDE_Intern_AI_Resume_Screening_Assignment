@@ -961,6 +961,7 @@ dependencies = [
     { name = "httpx" },
     { name = "openai" },
     { name = "pymupdf" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
@@ -969,6 +970,7 @@ requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "openai", specifier = ">=3.14.0" },
     { name = "pymupdf", specifier = ">=1.28.2" },
+    { name = "python-dotenv", specifier = ">=1.2.3" },
 ]
 
 [[package]]

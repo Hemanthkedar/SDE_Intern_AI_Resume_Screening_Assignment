@@ -1,14 +1,17 @@
 import os
 
 
+SCREENING_MODE = os.getenv(
+    "SCREENING_MODE",
+    "auto",
+).lower()
+
 OPENAI_MODEL = os.getenv(
     "OPENAI_MODEL",
     "gpt-5-mini",
 )
 
-GITHUB_TOKEN = os.getenv(
-    "GITHUB_TOKEN",
-)
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 AI_PROJECT_MAX = 40
 PYTHON_BACKEND_MAX = 30

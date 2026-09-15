@@ -7,6 +7,11 @@ class PDFExtractionError(Exception):
     """Raised when a PDF cannot be processed."""
 
 
+# Keep PyMuPDF warnings available internally, but don't print
+# recoverable MuPDF diagnostics to the terminal.
+pymupdf.TOOLS.mupdf_display_errors(False)
+
+
 def extract_text_from_pdf(path: str | Path) -> str:
     pdf_path = Path(path)
 
@@ -18,7 +23,7 @@ def extract_text_from_pdf(path: str | Path) -> str:
 
     try:
         with pymupdf.open(pdf_path) as document:
-            pages = []
+            pages: list[str] = []
 
             for page in document:
                 text = page.get_text("text").strip()
